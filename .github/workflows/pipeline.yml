@@ -14,6 +14,8 @@ jobs:
     #clones the repo to the virtual environment
       - name: Checkout code
       #understood by github actions to checkout the code
+      #<owner>/<repository>@<version>
+      #Use version 2 of the official GitHub Action called checkout, maintained by the GitHub organization.
         uses: actions/checkout@v2
       #sets up docker in the virtual environment
       - name: Build docker image
