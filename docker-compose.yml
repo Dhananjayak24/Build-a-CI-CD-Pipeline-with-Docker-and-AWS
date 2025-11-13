@@ -1,0 +1,15 @@
+# Docker Compose configuration file for Spring Boot application
+#Tells docker to use this version of file formatting for compose
+version: "3.8"
+
+# Define the services to be run(Like app, db, etc)
+services:
+#Define the spring boot application service
+  app:
+  #Specify the docker image to be used or built for this service
+    image: spring-boot-app-image
+    #If build command is not present it will look for the image in docker hub. It says build in currecnt directory
+    build: .
+    #Map the container port 80 to host port 80
+    ports:
+      - "80:80"
