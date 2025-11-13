@@ -1,0 +1,20 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+  #build virtual environment shell
+    runs-on: ubuntu-latest
+
+    steps:
+    #clones the repo to the virtual environment
+      - name: Checkout code
+      #understood by github actions to checkout the code
+        uses: actions/checkout@v2
+      #sets up docker in the virtual environment
+      - name: Build docker image
+        run: docker build -t spring-boot-app-image .
