@@ -17,6 +17,19 @@ jobs:
       #<owner>/<repository>@<version>
       #Use version 2 of the official GitHub Action called checkout, maintained by the GitHub organization.
         uses: actions/checkout@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Amazon ECR Login
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
       #sets up docker in the virtual environment
       - name: Build docker image
-        run: docker build -t spring-boot-app-image .
+        run: docker build -t ${{ secrets.ECR_REPO }}:latest .
+      - name: Push Docker image to Amazon ECR
+        run: |
+          docker push ${{ secrets.ECR_REPO }}:latest
