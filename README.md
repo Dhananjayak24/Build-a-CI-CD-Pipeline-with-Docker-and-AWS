@@ -13,7 +13,7 @@ The goal of both projects is to automate the end-to-end deployment process from 
 
 ---
 
-## SECTION 1: Main Tutorial Overview
+## Main Tutorial Overview
 
 The main guided project demonstrates how to deploy a Spring Boot application using Docker, AWS ECR, and GitHub Actions.
 
@@ -26,7 +26,7 @@ Topics covered include:
 
 ---
 
-## SECTION 2: Steps for the Main Tutorial (Spring Boot Application)
+## Steps for the Main Tutorial (Spring Boot Application)
 
 ### Step 1: Setup Project and Git Repository
 
