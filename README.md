@@ -6,8 +6,8 @@ A guided DevOps project demonstrating how to build and automate a complete CI/CD
 This repository documents the complete guide followed while learning how to build automated deployment pipelines using Docker, AWS, and GitHub Actions.
 
 This includes:
-- The main tutorial (Spring Boot application deployment)
-- The cumulative practice task (Node.js deployment pipeline)
+- [The main tutorial](https://github.com/Dhananjayak24/CICD_excercise) (Spring Boot application deployment)
+- [The cumulative practice task](https://github.com/Dhananjayak24/nodejs-aws-cicd-pipeline) (Node.js deployment pipeline)
 
 The goal of both projects is to automate the end-to-end deployment process from code commits to running applications on EC2 using Docker images stored in AWS ECR.
 
